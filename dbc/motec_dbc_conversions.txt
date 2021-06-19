@@ -1,0 +1,23 @@
+TPS0
+	Low: 606
+	High: 1682
+	Delta: 1056
+	Eqn: (0.0946969697,-714)
+
+TPS1
+	Low: 3125
+	High: 4216
+	Delta: 1091
+	Eqn: (0.0916590284,-3563)
+
+BPS
+	ANALOG
+	Low: 0.5v
+	High: 4.5v
+	Delta: 4v
+
+	DIGITAL
+	Low: 0x0, 0
+	High: 0x1387, 4999 
+	Delta: 4999
+	Eqn: (0.02, 0)
