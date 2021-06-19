@@ -41,7 +41,7 @@ BO_ 165 MCM_Motor_Position_Info: 8 MCM
  SG_ MCM_Motor_Angle : 0|16@1+ (1,0) [-360|360] "DEG" VCU
  SG_ MCM_Motor_Speed : 16|16@1+ (1,0) [-7000|7000] "RPM" VCU
  SG_ MCM_Electrical_Output_Frequency : 32|16@1+ (1,0) [0|120] "Hz" VCU
- SG_ MCM_Resolver Angle : 48|16@1+ (1,0) [-360|360] "DEG" VCU
+ SG_ MCM_Resolver_Angle : 48|16@1+ (1,0) [-360|360] "DEG" VCU
 
 BO_ 166 MCM_Current_Info: 8 MCM
  SG_ MCM_Phase_A_Current : 0|16@1+ (1,0) [-400|400] "A" VCU
@@ -128,7 +128,7 @@ BO_ 1286 VCU_Safety_Checker: 8 VCU
  SG_ VCU_WARNING_UNUSED_45 : 45|1@1- (1,0) [0|1] "" VCU
  SG_ VCU_WARNING_UNUSED_46 : 46|1@1- (1,0) [0|1] "" VCU
  SG_ VCU_WARNING_UNUSED_47 : 47|1@1- (1,0) [0|1] "" VCU
- SG_ VCU_HVIL_TermSenseLost : 48|1@1- (1,0) [0|1] "" VCU
+ SG_ VCU_NOTICE_HVIL_TermSenseLost : 48|1@1- (1,0) [0|1] "" VCU
  SG_ VCU_NOTICE_UNUSED_49 : 49|1@1- (1,0) [0|1] "" VCU
  SG_ VCU_NOTICE_UNUSED_50 : 50|1@1- (1,0) [0|1] "" VCU
  SG_ VCU_NOTICE_UNUSED_51 : 51|1@1- (1,0) [0|1] "" VCU
