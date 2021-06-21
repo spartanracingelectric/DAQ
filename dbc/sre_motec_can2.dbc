@@ -1,0 +1,66 @@
+VERSION ""
+
+NS_ :
+	BA_
+	BA_DEF_
+	BA_DEF_DEF_
+	BA_DEF_DEF_REL_
+	BA_DEF_REL_
+	BA_DEF_SGTYPE_
+	BA_REL_
+	BA_SGTYPE_
+	BO_TX_BU_
+	BU_BO_REL_
+	BU_EV_REL_
+	BU_SG_REL_
+	CAT_
+	CAT_DEF_
+	CM_
+	ENVVAR_DATA_
+	EV_DATA_
+	FILTER
+	NS_DESC_
+	SGTYPE_
+	SGTYPE_VAL_
+	SG_MUL_VAL_
+	SIGTYPE_VALTYPE_
+	SIG_GROUP_
+	SIG_TYPE_REF_
+	SIG_VALTYPE_
+	VAL_
+	VAL_TABLE_
+
+BS_:
+
+BU_: DBG VCU BMS MCM DAQ
+
+BO_ 1260 DAQ_IMU_Angular_Rate: 8 DAQ
+ SG_ IMU_Angular_Rate_Z : 32|16@0- (0.1,0) [-250|250] "dps" DAQ
+ SG_ IMU_Angular_Rate_Y : 16|16@0- (0.1,0) [-250|250] "dps" DAQ
+ SG_ IMU_Angular_Rate_X : 0|16@0- (0.1,0) [-250|250] "dps" DAQ
+
+BO_ 1261 DAQ_IMU_Acceleration: 8 DAQ
+ SG_ IMU_Temperature : 48|16@0- (1,0) [-10|10] "C" DAQ
+ SG_ IMU_Acceleration_Z : 32|16@0- (0.01,0) [-10|10] "g" DAQ
+ SG_ IMU_Acceleration_Y : 16|16@0- (0.01,0) [-10|10] "g" DAQ
+ SG_ IMU_Acceleration_X : 0|16@0- (0.01,0) [-10|10] "g" DAQ
+
+
+CM_ BU_ VCU "The vehicle control unit";
+CM_ BU_ MCM "The motor controller of the car";
+CM_ BU_ BMS "The battery management system";
+CM_ BU_ DAQ "The data acquisition unit";
+CM_ BO_ 1260 "IMU Angular Rate";
+CM_ BO_ 1261 "IMU Acceleration";
+
+BA_DEF_ "BusType" STRING ;
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 0;
+BA_DEF_ SG_ "FieldType" STRING ;
+
+BA_DEF_DEF_ "BusType" "CAN";
+BA_DEF_DEF_ "FieldType" "";
+BA_DEF_DEF_ "GenMsgCycleTime" 0;
+
+BA_ "FieldType" SG_ 100 DRIVER_HEARTBEAT_cmd "DRIVER_HEARTBEAT_cmd";
+
+VAL_ 100 DRIVER_HEARTBEAT_cmd 2 "DRIVER_HEARTBEAT_cmd_REBOOT" 1 "DRIVER_HEARTBEAT_cmd_SYNC" 0 "DRIVER_HEARTBEAT_cmd_NOOP" ;
