@@ -32,7 +32,7 @@ NS_ :
 
 BS_:
 
-BU_: DBG VCU BMS MCM
+BU_: DBG VCU BMS MCM DCU
 
 BO_ 160 MCM_Temperature_Set_1: 8 MCM
  SG_ MCM_Gate_Driver_Board_Temperature : 48|16@1- (0.1,0) [-3276.8|3276.7] "C" VCU
@@ -191,8 +191,8 @@ BO_ 1575 BMS_Status_SoC: 8 BMS
  SG_ BMS_Capacity : 32|32@1- (0.1,0) [0|30] "Ah" VCU
 
 BO_ 1576 BMS_Temperature_Average: 8 BMS
- SG_ BMS_Cell_Temperature_Average : 0|32@1- (0.1,-100) [-100.0|100.0] "C" VCU
- SG_ BMS_Board_Temperature_Average : 32|32@1- (0.1,-100) [-100.0|100.0] "C" VCU
+ SG_ BMS_Cell_Temperature_Average : 0|32@1- (0.1,0) [-100.0|100.0] "C" VCU
+ SG_ BMS_Board_Temperature_Average : 32|32@1- (0.1,0) [-100.0|100.0] "C" VCU
 
 BO_ 1577 BMS_Cell_Temperature: 8 BMS
  SG_ BMS_Cell_Temperature_High : 0|32@1- (0.1,0) [-99.9|99.9] "C" VCU
@@ -205,10 +205,14 @@ BO_ 1584 BMS_Board_Temperature: 8 BMS
 BO_ 1585 BMS_Load_Power: 4 BMS
  SG_ BMS_Load_Power : 0|32@1- (0.1,0) [-79999.9|79999.9] "W" VCU
 
+BO_ 1793 DCU_Timestamp: 1 DCU
+ SG_ DCU_Timestamp : 0|8@1+ (1,0) [0|255] "" VCU
+
 
 CM_ BU_ VCU "The vehicle control unit";
 CM_ BU_ MCM "The motor controller of the car";
 CM_ BU_ BMS "The battery management system";
+CM_ BU_ DCU "The dash control unit";
 CM_ BO_ 160 "Motor Controller Temperatures Set 1";
 CM_ BO_ 161 "Motor Controller Temperatures Set 2";
 CM_ BO_ 162 "Motor Controller Temperatures Set 3";
@@ -231,6 +235,8 @@ CM_ BO_ 1576 "Cell and BMS Board Temperature Average";
 CM_ BO_ 1577 "Cell Temperature High and Low"; 
 CM_ BO_ 1584 "BMS Board Temperature High and Low"; 
 CM_ BO_ 1585 "Accumulator Load Power"; 
+CM_ BO_ 1793 "Dash Control Unit Timestamp"; 
+
 
 BA_DEF_ "BusType" STRING ;
 BA_DEF_ BO_ "GenMsgCycleTime" INT 0 0;
