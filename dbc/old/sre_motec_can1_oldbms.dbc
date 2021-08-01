@@ -81,30 +81,20 @@ BO_ 192 MCM_Command_Messages: 8 VCU
  SG_ MCM_RollingCounter : 44|4@1+ (1,0) [0|15] "" MCM
 
 BO_ 1280 VCU_TPS0: 8 VCU
- SG_ TPS0ThrottlePercent0FF : 0|8@1+ (0.392156862746,0) [0|100.00000000023] "%" VCU
- SG_ TPS0Percent0FF : 8|8@1+ (0.392156862746,0) [0|100.00000000023] "%" VCU
- SG_ TPS0Voltage : 16|16@1+ (0.001,0) [0|65.535] "V" VCU
- SG_ TPS0CalibMin : 32|16@1+ (0.001,0) [0|65.535] "V" VCU
- SG_ TPS0CalibMax : 48|16@1+ (0.001,0) [0|65.535] "V" VCU
+ SG_ VCU_TPS0_Value : 16|16@1+ (0.08,-474) [0|100] "%" VCU
 
 BO_ 1281 VCU_TPS1: 8 VCU
- SG_ ThrottlePercent0FF : 0|8@1+ (1,0) [0|255] "" VCU
- SG_ TPS1Percent0FF : 8|8@1+ (0.392156862746,0) [0|100.00000000023] "%" VCU
- SG_ TPS1Voltage : 16|16@1+ (0.001,0) [0|65.535] "V" VCU
- SG_ TPS1CalibMin : 32|16@1+ (0.001,0) [0|65.535] "V" VCU
- SG_ TPS1CalibMax : 48|16@1+ (0.001,0) [0|65.535] "V" VCU
+ SG_ VCU_TPS1_Value : 16|16@1+ (0.08,-3334) [0|100] "%" VCU
 
 BO_ 1282 VCU_BPS: 8 VCU
-SG_ BrakePercent0FF : 0|8@1+ (0.392156862746,0) [0|100.00000000023] "%" VCU
-SG_ BPS0Voltage : 16|16@1+ (0.001,0) [0|65.535] "V" VCU
-SG_ BPS0CalibMin : 32|16@1+ (0.001,0) [0|65.535] "V" VCU
-SG_ BPS0CalibMax : 48|16@1+ (0.001,0) [0|65.535] "V" VCU
+ SG_ VCU_BPS_Percent : 0|16@1+ (1,0) [0|100] "%" VCU
+ SG_ VCU_BPS_Value : 16|16@1+ (0.1,0) [0|8000] "PSI" VCU
 
-BO_ 1284 VCU_WSS: 8 VCU
- SG_ VCU_WSS_FL : 0|16@1+ (1,0) [0|32767] "RPM" VCU
- SG_ VCU_WSS_FR : 16|16@1+ (1,0) [0|32767] "RPM" VCU
- SG_ VCU_WSS_RL : 32|16@1+ (1,0) [0|32767] "RPM" VCU
- SG_ VCU_WSS_RR : 48|16@1+ (1,0) [0|32767] "RPM" VCU
+BO_ 1283 VCU_WSS: 8 VCU
+ SG_ VCU_WSS_FL : 0|16@1- (1,0) [-100000|100000] "mm/s" VCU
+ SG_ VCU_WSS_FR : 16|16@1- (1,0) [-100000|100000] "mm/s" VCU
+ SG_ VCU_WSS_RL : 32|16@1- (1,0) [-100000|100000] "mm/s" VCU
+ SG_ VCU_WSS_RR : 48|16@1- (1,0) [-100000|100000] "mm/s" VCU
 
 BO_ 1286 VCU_Safety_Checker: 8 VCU
  SG_ VCU_FAULT_TPS_OutOfRange : 0|1@1+ (1,0) [0|1] "" VCU
@@ -116,15 +106,61 @@ BO_ 1286 VCU_Safety_Checker: 8 VCU
  SG_ VCU_FAULT_TPS_NotCalibrated : 6|1@1+ (1,0) [0|1] "" VCU
  SG_ VCU_FAULT_BPS_NotCalibrated : 7|1@1+ (1,0) [0|1] "" VCU
  SG_ VCU_FAULT_TPS_OutOfSync : 8|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_BPS_OutOfSync : 9|1@1+ (1,0) [0|1] "" VCU
  SG_ VCU_FAULT_TPSBPS_Implausible : 10|1@1+ (1,0) [0|1] "" VCU
- SG_ VCU_FAULT_BSPD_SoftFault : 12|1@1+ (1,0) [0|1] "" VCU
- SG_ VCU_FAULT_LVS_BatteryEmpty : 16|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_11 : 11|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_12 : 12|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_13 : 13|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_14 : 14|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_15 : 15|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_LVS_BatteryVeryLow : 16|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_17 : 17|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_18 : 18|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_19 : 19|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_20 : 20|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_21 : 21|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_22 : 22|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_23 : 23|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_24 : 24|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_25 : 25|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_26 : 26|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_27 : 27|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_28 : 28|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_29 : 29|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_30 : 30|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_FAULT_UNUSED_31 : 31|1@1+ (1,0) [0|1] "" VCU
  SG_ VCU_WARNING_LVS_BatteryLow : 32|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_WARNING_UNUSED_33 : 33|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_WARNING_UNUSED_34 : 34|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_WARNING_UNUSED_35 : 35|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_WARNING_UNUSED_36 : 36|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_WARNING_UNUSED_37 : 37|1@1+ (1,0) [0|1] "" VCU
  SG_ VCU_WARNING_HVIL_OverrideEn : 38|1@1+ (1,0) [0|1] "" VCU
  SG_ VCU_WARNING_SAFETY_BypassEn : 39|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_WARNING_UNUSED_40 : 40|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_WARNING_UNUSED_41 : 41|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_WARNING_UNUSED_42 : 42|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_WARNING_UNUSED_43 : 43|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_WARNING_UNUSED_44 : 44|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_WARNING_UNUSED_45 : 45|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_WARNING_UNUSED_46 : 46|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_WARNING_UNUSED_47 : 47|1@1+ (1,0) [0|1] "" VCU
  SG_ VCU_NOTICE_HVIL_TermSenseLost : 48|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_NOTICE_UNUSED_49 : 49|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_NOTICE_UNUSED_50 : 50|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_NOTICE_UNUSED_51 : 51|1@1+ (1,0) [0|1] "" VCU
  SG_ VCU_NOTICE_BMS_Over75kW : 52|1@1+ (1,0) [0|1] "" VCU
  SG_ VCU_NOTICE_MCM_Over75kW : 53|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_NOTICE_UNUSED_54 : 54|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_NOTICE_UNUSED_55 : 55|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_NOTICE_UNUSED_56 : 56|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_NOTICE_UNUSED_57 : 57|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_NOTICE_UNUSED_58 : 58|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_NOTICE_UNUSED_59 : 59|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_NOTICE_UNUSED_60 : 60|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_NOTICE_UNUSED_61 : 61|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_NOTICE_UNUSED_62 : 62|1@1+ (1,0) [0|1] "" VCU
+ SG_ VCU_NOTICE_UNUSED_63 : 63|1@1+ (1,0) [0|1] "" VCU
 
 
 BO_ 1568 BMS_Status: 1 BMS
@@ -135,7 +171,7 @@ BO_ 1568 BMS_Status: 1 BMS
  SG_ BMS_Power_Exceed_80kW : 4|1@1+ (1,0) [0|0] "" VCU
 
 BO_ 1571 BMS_Pack_Info: 8 BMS
- SG_ BMS_Pack_Voltage : 0|32@1- (0.1,0) [0|300.0] "V" VCU
+ SG_ BMS_Pack_Voltage : 0|32@1- (0.01,0) [0|300.0] "V" VCU
  SG_ BMS_Pack_Current : 32|32@1- (0.1,-3000) [-3000.0|3000.0] "A" VCU
 
 BO_ 1572 BMS_Load_Info: 8 BMS
@@ -155,8 +191,8 @@ BO_ 1575 BMS_Status_SoC: 8 BMS
  SG_ BMS_Capacity : 32|32@1- (0.1,0) [0|30] "Ah" VCU
 
 BO_ 1576 BMS_Temperature_Average: 8 BMS
- SG_ BMS_Cell_Temperature_Average : 0|32@1- (0.1,0) [-100.0|100.0] "C" VCU
- SG_ BMS_Board_Temperature_Average : 32|32@1- (0.1,0) [-100.0|100.0] "C" VCU
+ SG_ BMS_Cell_Temperature_Average : 0|32@1- (0.1,-100) [-100.0|100.0] "C" VCU
+ SG_ BMS_Board_Temperature_Average : 32|32@1- (0.1,-100) [-100.0|100.0] "C" VCU
 
 BO_ 1577 BMS_Cell_Temperature: 8 BMS
  SG_ BMS_Cell_Temperature_High : 0|32@1- (0.1,0) [-99.9|99.9] "C" VCU
