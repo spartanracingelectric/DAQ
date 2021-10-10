@@ -32,7 +32,7 @@ NS_ :
 
 BS_:
 
-BU_: DBG VCU BMS MCM DCU
+BU_: DBG VCU BMS MCM DCU DAQ S2C
 
 BO_ 160 MCM_Temperature_Set_1: 8 MCM
  SG_ MCM_Gate_Driver_Board_Temp : 48|16@1- (0.1,0) [-3276.8|3276.7] "C" VCU
@@ -178,6 +178,12 @@ BO_ 471 MCM_U2C_Command_Txd: 8 MCM
  SG_ MCM_ID_Byte : 0|8@1+ (1,0) [0|255] "" VCU
  SG_ MCM_Setpoint_Calc : 8|8@1+ (1,0) [0|255] "" VCU
 
+BO_ 896 S2C_Busbar_Temp_1: 8 DAQ
+ SG_ S2C_ADC0_Busbar_Temp : 0|16@1+ (0.01,0) [0|65535] "C" S2C
+ SG_ S2C_ADC1_Busbar_Temp : 16|16@1+ (0.01,0) [0|65535] "C" S2C
+ SG_ S2C_ADC2_Busbar_Temp : 32|16@1+ (0.01,0) [0|65535] "C" S2C
+ SG_ S2C_ADC3_Busbar_Temp : 48|16@1+ (0.01,0) [0|65535] "C" S2C
+
 BO_ 1280 VCU_TPS0: 8 VCU
  SG_ TPS0ThrottlePercent0FF : 0|8@1+ (0.392156862746,0) [0|100.00000000023] "%" VCU
  SG_ TPS0Percent0FF : 8|8@1+ (0.392156862746,0) [0|100.00000000023] "%" VCU
@@ -266,6 +272,18 @@ BO_ 1577 BMS_Cell_Temperature: 8 BMS
  SG_ BMS_Cell_Temperature_High : 0|32@1- (0.1,0) [-99.9|99.9] "C" VCU
  SG_ BMS_Cell_Temperature_Low : 32|32@1- (0.1,0) [-99.9|99.9] "C" VCU
 
+BO_ 1578 BMS_M_Temperature_Average_1: 8 BMS
+ SG_ BMS_M1_Temp_Average : 0|32@1- (0.1,0) [-100.0|100.0] "C" VCU
+ SG_ BMS_M2_Temp_Average : 32|32@1- (0.1,0) [-100.0|100.0] "C" VCU
+
+BO_ 1579 BMS_M_Temperature_Average_1: 8 BMS
+ SG_ BMS_M3_Temp_Average : 0|32@1- (0.1,0) [-100.0|100.0] "C" VCU
+ SG_ BMS_M4_Temp_Average : 32|32@1- (0.1,0) [-100.0|100.0] "C" VCU
+
+BO_ 1580 BMS_M_Temperature_Average_1: 8 BMS
+ SG_ BMS_M5_Temp_Average : 0|32@1- (0.1,0) [-100.0|100.0] "C" VCU
+ SG_ BMS_M6_Temp_Average : 32|32@1- (0.1,0) [-100.0|100.0] "C" VCU
+
 BO_ 1584 BMS_Board_Temperature: 8 BMS
  SG_ BMS_Board_Temperature_High : 0|32@1- (0.1,0) [-100.0|100.0] "C" VCU
  SG_ BMS_Board_Temperature_Low : 32|32@1- (0.1,0) [-100.0|100.0] "C" VCU
@@ -275,6 +293,7 @@ BO_ 1585 BMS_Load_Power: 4 BMS
 
 BO_ 1793 DCU_Timestamp: 1 DCU
  SG_ DCU_Timestamp : 0|8@1+ (1,0) [0|255] "" VCU
+
 
 
 CM_ BU_ VCU "The vehicle control unit";
