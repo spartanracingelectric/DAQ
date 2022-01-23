@@ -99,20 +99,20 @@ BO_ 169 MCM_Internal_Voltages: 8 MCM
  SG_ MCM_Reference_Voltage_1_5 : 0|16@1- (0.01,0) [-327.68|327.67] "V" VCU
 
 BO_ 170 MCM_Internal_States: 8 MCM
- SG_ MCM_Internal_Direction_Command : 56|8@1+ (1,0) [0|1] "" MCM
- SG_ MCM_Internal_Inverter_Enable_State : 48|1@1+ (1,0) [0|1] "" MCM
- SG_ MCM_Internal_Relay_3_Status : 26|1@1+ (1,0) [0|1] "" MCM
- SG_ MCM_Internal_Relay_4_Status : 27|1@1+ (1,0) [0|1] "" MCM
- SG_ MCM_Internal_Relay_2_Status : 25|1@1+ (1,0) [0|1] "" MCM
- SG_ MCM_Internal_Inverter_Run_Mode : 32|1@1+ (1,0) [0|1] "" MCM
- SG_ MCM_Internal_Inverter_Command_Mode : 40|1@1+ (1,0) [0|1] "" MCM
- SG_ MCM_Internal_Relay_1_Status : 24|1@1+ (1,0) [0|1] "" MCM
- SG_ MCM_Internal_Inverter_State : 16|8@1+ (1,0) [0|255] "" MCM
- SG_ MCM_Internal_VSM_State : 0|16@1+ (1,0) [0|15] "" MCM
- SG_ MCM_Internal_Inverter_Enable_Lockout : 55|1@1+ (1,0) [0|1] "" MCM
- SG_ MCM_Internal_Inverter_Discharge_State : 37|3@1+ (1,0) [0|7] "" MCM
- SG_ MCM_Internal_Relay_5_Status : 28|1@1+ (1,0) [0|1] "" MCM
- SG_ MCM_Internal_Relay_6_Status : 29|1@1+ (1,0) [0|1] "" MCM
+ SG_ MCM_Int_Direction_Command : 56|8@1+ (1,0) [0|1] "" MCM
+ SG_ MCM_Int_Invert_Enable_State : 48|1@1+ (1,0) [0|1] "" MCM
+ SG_ MCM_Int_Relay_3_Status : 26|1@1+ (1,0) [0|1] "" MCM
+ SG_ MCM_Int_Relay_4_Status : 27|1@1+ (1,0) [0|1] "" MCM
+ SG_ MCM_Int_Relay_2_Status : 25|1@1+ (1,0) [0|1] "" MCM
+ SG_ MCM_Int_Invert_Run_Mode : 32|1@1+ (1,0) [0|1] "" MCM
+ SG_ MCM_Int_Invert_Command_Mode : 40|1@1+ (1,0) [0|1] "" MCM
+ SG_ MCM_Int_Relay_1_Status : 24|1@1+ (1,0) [0|1] "" MCM
+ SG_ MCM_Int_Inverter_State : 16|8@1+ (1,0) [0|255] "" MCM
+ SG_ MCM_Int_VSM_State : 0|16@1+ (1,0) [0|15] "" MCM
+ SG_ MCM_Int_Invert_En_Lockout : 55|1@1+ (1,0) [0|1] "" MCM
+ SG_ MCM_Int_Invert_Dischrg_State : 37|3@1+ (1,0) [0|7] "" MCM
+ SG_ MCM_Int_Relay_5_Status : 28|1@1+ (1,0) [0|1] "" MCM
+ SG_ MCM_Int_Relay_6_Status : 29|1@1+ (1,0) [0|1] "" MCM
 
 BO_ 171 MCM_Fault_Codes: 8 MCM
  SG_ MCM_Run_Fault_Hi : 48|16@1+ (1,0) [0|65535] "" VCU
@@ -157,15 +157,15 @@ BO_ 192 MCM_Command_Messages: 8 VCU
 BO_ 193 MCM_Read_Write_Param_Command: 8 VCU
  SG_ MCM_Data_Command : 32|16@1- (1,0) [-32768|32767] "" VCU
  SG_ MCM_Read_Write_Command : 16|1@1+ (1,0) [0|1] "" VCU
- SG_ MCM_Parameter_Address_Command : 0|16@1+ (1,0) [0|65535] "" VCU
+ SG_ MCM_Param_Address_Command : 0|16@1+ (1,0) [0|65535] "" VCU
 
 BO_ 194 MCM_Read_Write_Param_Response: 8 VCU
  SG_ MCM_Write_Success : 16|1@1+ (1,0) [0|1] "" VCU
  SG_ MCM_Data_Response : 32|16@1- (1,0) [-32768|32767] "" VCU
- SG_ MCM_Parameter_Address_Response : 0|16@1+ (1,0) [0|65535] "" VCU
+ SG_ MCM_Param_Address_Response : 0|16@1+ (1,0) [0|65535] "" VCU
 
 BO_ 469 MCM_U2C_Message_Rxd: 8 MCM
- SG_ MCM_HV_Input_Current_Sensor_Valid : 4|1@1+ (1,0) [0|1] "" VCU
+ SG_ MCM_HV_In_Curr_Sens_Valid : 4|1@1+ (1,0) [0|1] "" VCU
  SG_ MCM_14V_Master_Fault : 7|1@1+ (1,0) [0|1] "" VCU
  SG_ MCM_HV_Input_Current : 8|8@1+ (1,0) [0|255] "" VCU
  SG_ MCM_DTC_Status : 16|3@1+ (1,0) [0|7] "" VCU
@@ -235,6 +235,15 @@ BO_ 1286 VCU_Safety_Checker: 8 VCU
  SG_ VCU_NOTICE_HVIL_TermSenseLost : 48|1@1+ (1,0) [0|1] "" VCU
  SG_ VCU_NOTICE_BMS_Over75kW : 52|1@1+ (1,0) [0|1] "" VCU
  SG_ VCU_NOTICE_MCM_Over75kW : 53|1@1+ (1,0) [0|1] "" VCU
+
+BO_ 1288 VCU_Regen_Settings: 8 VCU
+ SG_ VCU_MCM_RegenMode : 0|8@1+ (1,0) [0|255] "" VCU
+ SG_ VCU_MCM_MaxTorqueNm : 16|8@1+ (1,0) [0|255] "Nm" VCU
+ SG_ VCU_MCM_RegenTorqueLimitNm : 24|8@1+ (1,0) [0|255] "Nm" VCU
+ SG_ VCU_MCM_RegenTorqueZeroPedal : 32|8@1+ (1,0) [0|255] "Nm" VCU
+ SG_ VCU_MCM_RegenAPPSMaxCoasting : 48|8@1+ (1,0) [0|255] "" VCU
+ SG_ VCU_MCM_RegenBPSMaxRegen : 56|8@1+ (1,0) [0|255] "" VCU
+
 
 
 BO_ 1568 BMS_Status: 1 BMS
