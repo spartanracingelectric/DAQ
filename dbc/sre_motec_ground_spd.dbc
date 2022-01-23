@@ -34,7 +34,7 @@ BS_:
 
 BU_: DBG DAQ
 
-BO_ 1296 VCU_Ground_Speed_Motor: 8 DAQ
+BO_ 1290 VCU_Ground_Speed_Motor: 8 DAQ
  SG_ VCU_Ground_Speed_Motor_Kph : 0|16@1- (0.01,0) [-32768|32767] "Kph" DAQ
 
 CM_ BU_ DAQ "The data acquisition unit";
