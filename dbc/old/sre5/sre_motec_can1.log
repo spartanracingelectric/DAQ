@@ -1,0 +1,18 @@
+Conversion Warnings Log
+
+
+MSG_ID: 896 	MSG_TYPE: S 	MSG_NAME: S2C_Busbar_Temp_1
+	SIG_NAME: S2C_ADC0_Busbar_Temp, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: S2C_ADC1_Busbar_Temp, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: S2C_ADC2_Busbar_Temp, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: S2C_ADC3_Busbar_Temp, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 1568 	MSG_TYPE: S 	MSG_NAME: BMS_Status
+	SIG_NAME: BMS_Cell_Over_Voltage, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: BMS_Cell_Under_Voltage, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: BMS_Cell_Over_Temperature, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: BMS_Board_Over_Temperature, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: BMS_Power_Exceed_80kW, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+BA_DEF_DEF_ " "  : Match not Found in Param List
+BA_DEF_DEF_ " "  : Match not Found in Param List
+BA_DEF_DEF_ " 0;"  : Match not Found in Param List

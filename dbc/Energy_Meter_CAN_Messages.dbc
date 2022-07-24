@@ -28,16 +28,16 @@ BS_:
 BU_:
 
 
-BO_ 256 Measurement: 8 Vector__XXX
- SG_ Current : 7|32@0- (1.5258789063e-005,0) [0|0] "A" Vector__XXX
- SG_ Voltage : 39|32@0- (1.5258789063e-005,0) [0|0] "V" Vector__XXX
+BO_ 256 EMeter_Measurement: 8 Vector__XXX
+ SG_ EMeter_Current : 7|32@0- (1.5258789063e-005,0) [0|0] "A" Vector__XXX
+ SG_ EMeter_Voltage : 39|32@0- (1.5258789063e-005,0) [0|0] "V" Vector__XXX
 
-BO_ 1024 Status: 4 Vector__XXX
- SG_ VoltageGain : 3|4@0+ (1,0) [0|0] "bool" Vector__XXX
- SG_ CurrentGain : 7|4@0+ (1,0) [0|0] "" Vector__XXX
- SG_ OverVoltage : 8|1@0+ (1,0) [0|0] "bool" Vector__XXX
- SG_ OverPower : 9|1@0+ (1,0) [0|0] "bool" Vector__XXX
- SG_ Logging : 10|1@0+ (1,0) [0|0] "" Vector__XXX
+BO_ 1024 EMeter_Status: 4 Vector__XXX
+ SG_ EMeter_VoltageGain : 3|4@0+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ EMeter_CurrentGain : 7|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EMeter_OverVoltage : 8|1@0+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ EMeter_OverPower : 9|1@0+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ EMeter_Logging : 10|1@0+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2023 Reserved1: 8 Vector__XXX
 

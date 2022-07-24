@@ -1,0 +1,145 @@
+VERSION ""
+
+NS_ :
+	BA_
+	BA_DEF_
+	BA_DEF_DEF_
+	BA_DEF_DEF_REL_
+	BA_DEF_REL_
+	BA_DEF_SGTYPE_
+	BA_REL_
+	BA_SGTYPE_
+	BO_TX_BU_
+	BU_BO_REL_
+	BU_EV_REL_
+	BU_SG_REL_
+	CAT_
+	CAT_DEF_
+	CM_
+	ENVVAR_DATA_
+	EV_DATA_
+	FILTER
+	NS_DESC_
+	SGTYPE_
+	SGTYPE_VAL_
+	SG_MUL_VAL_
+	SIGTYPE_VALTYPE_
+	SIG_GROUP_
+	SIG_TYPE_REF_
+	SIG_VALTYPE_
+	VAL_
+	VAL_TABLE_
+
+BS_:
+
+BU_: DBG DAQ
+
+BO_ 1200 DAQ_LF_Tire_Temp_Ch1_4: 8 DAQ
+ SG_ LF_Temperature_4 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LF_Temperature_3 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LF_Temperature_2 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LF_Temperature_1 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1201 DAQ_LF_Tire_Temp_Ch5_8: 8 DAQ
+ SG_ LF_Temperature_8 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LF_Temperature_7 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LF_Temperature_6 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LF_Temperature_5 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1202 DAQ_LF_Tire_Temp_Ch9_12: 8 DAQ
+ SG_ LF_Temperature_12 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LF_Temperature_11 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LF_Temperature_10 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LF_Temperature_9 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1203 DAQ_LF_Tire_Temp_Ch13_16: 8 DAQ
+ SG_ LF_Temperature_16 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LF_Temperature_15 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LF_Temperature_14 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LF_Temperature_13 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1204 DAQ_RF_Tire_Temp_Ch1_4: 8 DAQ
+ SG_ RF_Temperature_4 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RF_Temperature_3 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RF_Temperature_2 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RF_Temperature_1 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1205 DAQ_RF_Tire_Temp_Ch5_8: 8 DAQ
+ SG_ RF_Temperature_8 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RF_Temperature_7 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RF_Temperature_6 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RF_Temperature_5 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1206 DAQ_RF_Tire_Temp_Ch9_12: 8 DAQ
+ SG_ RF_Temperature_12 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RF_Temperature_11 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RF_Temperature_10 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RF_Temperature_9 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1207 DAQ_RF_Tire_Temp_Ch13_16: 8 DAQ
+ SG_ RF_Temperature_16 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RF_Temperature_15 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RF_Temperature_14 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RF_Temperature_13 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1208 DAQ_LR_Tire_Temp_Ch1_4: 8 DAQ
+ SG_ LR_Temperature_4 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LR_Temperature_3 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LR_Temperature_2 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LR_Temperature_1 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1209 DAQ_LR_Tire_Temp_Ch5_8: 8 DAQ
+ SG_ LR_Temperature_8 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LR_Temperature_7 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LR_Temperature_6 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LR_Temperature_5 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1210 DAQ_LR_Tire_Temp_Ch9_12: 8 DAQ
+ SG_ LR_Temperature_12 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LR_Temperature_11 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LR_Temperature_10 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LR_Temperature_9 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1211 DAQ_LR_Tire_Temp_Ch13_16: 8 DAQ
+ SG_ LR_Temperature_16 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LR_Temperature_15 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LR_Temperature_14 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ LR_Temperature_13 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1212 DAQ_RR_Tire_Temp_Ch1_4: 8 DAQ
+ SG_ RR_Temperature_4 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RR_Temperature_3 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RR_Temperature_2 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RR_Temperature_1 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1213 DAQ_RR_Tire_Temp_Ch5_8: 8 DAQ
+ SG_ RR_Temperature_8 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RR_Temperature_7 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RR_Temperature_6 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RR_Temperature_5 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1214 DAQ_RR_Tire_Temp_Ch9_12: 8 DAQ
+ SG_ RR_Temperature_12 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RR_Temperature_11 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RR_Temperature_10 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RR_Temperature_9 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+BO_ 1215 DAQ_RR_Tire_Temp_Ch13_16: 8 DAQ
+ SG_ RR_Temperature_16 : 48|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RR_Temperature_15 : 32|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RR_Temperature_14 : 16|16@0+ (0.001,-100) [0|100] "C" DAQ
+ SG_ RR_Temperature_13 : 0|16@0+ (0.001,-100) [0|100] "C" DAQ
+
+CM_ BU_ DAQ "The data acquisition unit";
+
+BA_DEF_ "BusType" STRING ;
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 0;
+BA_DEF_ SG_ "FieldType" STRING ;
+
+BA_DEF_DEF_ "BusType" "CAN";
+BA_DEF_DEF_ "FieldType" "";
+BA_DEF_DEF_ "GenMsgCycleTime" 0;
+
+BA_ "FieldType" SG_ 100 DRIVER_HEARTBEAT_cmd "DRIVER_HEARTBEAT_cmd";
+
+VAL_ 100 DRIVER_HEARTBEAT_cmd 2 "DRIVER_HEARTBEAT_cmd_REBOOT" 1 "DRIVER_HEARTBEAT_cmd_SYNC" 0 "DRIVER_HEARTBEAT_cmd_NOOP" ;

@@ -1,0 +1,80 @@
+VERSION ""
+
+NS_ :
+	BA_
+	BA_DEF_
+	BA_DEF_DEF_
+	BA_DEF_DEF_REL_
+	BA_DEF_REL_
+	BA_DEF_SGTYPE_
+	BA_REL_
+	BA_SGTYPE_
+	BO_TX_BU_
+	BU_BO_REL_
+	BU_EV_REL_
+	BU_SG_REL_
+	CAT_
+	CAT_DEF_
+	CM_
+	ENVVAR_DATA_
+	EV_DATA_
+	FILTER
+	NS_DESC_
+	SGTYPE_
+	SGTYPE_VAL_
+	SG_MUL_VAL_
+	SIGTYPE_VALTYPE_
+	SIG_GROUP_
+	SIG_TYPE_REF_
+	SIG_VALTYPE_
+	VAL_
+	VAL_TABLE_
+
+BS_:
+
+BU_: DBG VCU BMS MCM DCU DAQ S2C
+
+BO_ 1296 VCU_80kW_Debug: 8 VCU
+ SG_ VCU_MCM_Power : 0|32@1+ (1,0) [0|1000000] "W" VCU
+ SG_ VCU_Safety_Checker_Notices : 32|32@1+ (1,0) [0|1000000] "" VCU
+
+CM_ BU_ VCU "The vehicle control unit";
+CM_ BU_ MCM "The motor controller of the car";
+CM_ BU_ BMS "The battery management system";
+CM_ BU_ DCU "The dash control unit";
+CM_ BO_ 160 "Motor Controller Temperatures Set 1";
+CM_ BO_ 161 "Motor Controller Temperatures Set 2";
+CM_ BO_ 162 "Motor Controller Temperatures Set 3";
+CM_ BO_ 165 "Motor Position Information";
+CM_ BO_ 166 "Motor Current Information";
+CM_ BO_ 167 "Motor Voltage Information";
+CM_ BO_ 192 "Motor Controller Command Messages";
+CM_ BO_ 1280 "Throttle Position Sensor 0 Value";
+CM_ BO_ 1281 "Throttle Position Sensor 1 Value";
+CM_ BO_ 1282 "Brake Pressure Sensor Value";
+CM_ BO_ 1283 "Wheel Speed Sensor Value";
+CM_ BO_ 1286 "VCU Safety Messages";
+CM_ BO_ 1568 "BMS Status and Fault Message";
+CM_ BO_ 1571 "Accumulator Pack Voltage and Current"; 
+CM_ BO_ 1572 "Accumulator Load Voltage and Current"; 
+CM_ BO_ 1573 "Cell Voltage High and Low"; 
+CM_ BO_ 1574 "Cell Voltage Average and Mismatch"; 
+CM_ BO_ 1575 "SOC Percentage and Battery Capacity"; 
+CM_ BO_ 1576 "Cell and BMS Board Temperature Average"; 
+CM_ BO_ 1577 "Cell Temperature High and Low"; 
+CM_ BO_ 1584 "BMS Board Temperature High and Low"; 
+CM_ BO_ 1585 "Accumulator Load Power"; 
+CM_ BO_ 1793 "Dash Control Unit Timestamp"; 
+
+
+BA_DEF_ "BusType" STRING ;
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 0;
+BA_DEF_ SG_ "FieldType" STRING ;
+
+BA_DEF_DEF_ "BusType" "CAN";
+BA_DEF_DEF_ "FieldType" "";
+BA_DEF_DEF_ "GenMsgCycleTime" 0;
+
+BA_ "FieldType" SG_ 100 DRIVER_HEARTBEAT_cmd "DRIVER_HEARTBEAT_cmd";
+
+VAL_ 100 DRIVER_HEARTBEAT_cmd 2 "DRIVER_HEARTBEAT_cmd_REBOOT" 1 "DRIVER_HEARTBEAT_cmd_SYNC" 0 "DRIVER_HEARTBEAT_cmd_NOOP" ;
